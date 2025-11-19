@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="main.js" defer></script>
+    <title>WCAG Prac 2</title>
+  </head>
+  <body>
+    <section id="container">
+      <h1>Fyll i dina uppgifter</h1>
+
+      <form id="form" novalidate>
+        <div class="field">
+          <label for="name">Namn:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-describedby="name-hint"
+          />
+          <span id="name-hint" class="visually-hidden">Obligatoriskt fält</span>
+        </div>
+
+        <div class="field">
+          <label for="email">E-postadress:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-describedby="email-hint"
+          />
+          <span id="email-hint" class="visually-hidden"
+            >Obligatoriskt fält</span
+          >
+        </div>
+
+        <div class="field">
+          <label for="password">Lösenord:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            aria-describedby="password-hint"
+          />
+          <span id="password-hint" class="visually-hidden"
+            >Obligatoriskt fält</span
+          >
+        </div>
+
+        <button type="submit">Skicka</button>
+      </form>
+
+      <div id="msg" role="alert" aria-live="assertive"></div>
+    </section>
+  </body>
+</html>
